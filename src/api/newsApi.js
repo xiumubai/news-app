@@ -1,8 +1,5 @@
 import axios from 'axios';
 
-const API_KEY = import.meta.env.VITE_NEWS_API_KEY || '9c0d54b6229243559ab9982dc4c1eaab';
-const BASE_URL = 'https://newsapi.org/v2/everything';
-
 /**
  * 获取新闻数据
  * @param {string} query - 搜索关键词
@@ -11,12 +8,16 @@ const BASE_URL = 'https://newsapi.org/v2/everything';
  */
 export const fetchNews = async (query = 'China', fromDate = '2025-07-11') => {
   try {
-    const response = await axios.get(BASE_URL, {
+    // 使用本地代理API而不是直接调用NewsAPI
+    // 在开发环境中使用相对路径，在生产环境中使用绝对路径
+    const API_URL = import.meta.env.PROD
+      ? '/api/news'
+      : '/api/news';
+
+    const response = await axios.get(API_URL, {
       params: {
-        q: query,
-        from: fromDate,
-        sortBy: 'publishedAt',
-        apiKey: API_KEY
+        query: query,
+        fromDate: fromDate
       }
     });
     return response.data;

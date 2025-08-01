@@ -33,3 +33,4 @@ dist-ssr
 # Markdown files (except README.md)
 *.md
 !README.md
+.vercel

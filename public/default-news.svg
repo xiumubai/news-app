@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360">
+  <rect width="640" height="360" fill="#f0f0f0"/>
+  <g fill="#888">
+    <path d="M320 140 L380 140 L380 220 L320 220 Z" />
+    <path d="M260 140 L310 140 L310 180 L260 180 Z" />
+    <path d="M260 190 L310 190 L310 220 L260 220 Z" />
+  </g>
+  <text x="320" y="260" font-family="Arial, sans-serif" font-size="24" text-anchor="middle" fill="#555">AI 新闻</text>
+  <text x="320" y="290" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#777">暂无图片</text>
+</svg>

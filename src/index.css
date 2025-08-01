@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  @apply transition-colors duration-300;
+}
+
+/* 暗色主题样式 */
+.dark body {
+  @apply bg-gray-900 text-gray-100;
+}
+
+.dark .bg-gray-100 {
+  @apply bg-gray-900;
+}
+
+.dark .bg-gray-200 {
+  @apply bg-gray-800;
+}
+
+.dark .text-gray-800 {
+  @apply text-gray-200;
+}
+
+.dark .text-gray-700 {
+  @apply text-gray-300;
+}
+
+.dark .text-gray-600 {
+  @apply text-gray-400;
+}
+
+/* 添加一些自定义工具类 */
+@layer components {
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+  }
+  
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+  }
+  
+  /* 动画延迟类 */
+  .delay-75 {
+    animation-delay: 0.15s;
+  }
+  
+  .delay-150 {
+    animation-delay: 0.3s;
+  }
+}
